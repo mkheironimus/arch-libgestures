@@ -1,0 +1,8 @@
+--- libgestures/include/gestures/include/finger_metrics.h	2017-01-29 12:59:14.691287872 -0600
++++ libgestures-fix/include/gestures/include/finger_metrics.h	2017-01-29 13:00:30.714614912 -0600
+@@ -9,4 +9,5 @@
+ #include "gestures/include/prop_registry.h"
+ #include "gestures/include/vector.h"
++#include <math.h>
+ 
+ namespace gestures {
