@@ -1,6 +1,6 @@
---- libgestures/src/immediate_interpreter.cc.orig	2017-01-29 13:02:49.227936779 -0600
-+++ libgestures/src/immediate_interpreter.cc	2018-01-28 18:37:33.586957114 -0600
-@@ -1409,7 +1409,7 @@
+--- src/immediate_interpreter.cc.orig	2015-12-07 23:57:57.000000000 -0600
++++ src/immediate_interpreter.cc	2020-08-26 17:24:00.354676506 -0500
+@@ -1280,7 +1280,7 @@
      float dist_sq = DistanceTravelledSq(fs, true, true);
      float dt = hwstate.timestamp - origin_timestamps_[fs.tracking_id];
      bool closer_to_origin = dist_sq <= thumb_dist_sq_thresh;
@@ -9,7 +9,7 @@
                           dist_sq * min_dt * min_dt <
                           thumb_speed_sq_thresh * dt * dt);
      bool relatively_motionless = closer_to_origin || slower_moved;
-@@ -2830,7 +2830,7 @@
+@@ -2678,7 +2678,7 @@
              state_buffer_.Get(1)->timestamp - state_buffer_.Get(2)->timestamp;
          float dist_sq = DistSq(*current, *prev);
          float dist_sq2 = DistSq(*prev, *prev2);
